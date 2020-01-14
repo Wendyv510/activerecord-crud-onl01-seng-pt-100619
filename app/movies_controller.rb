@@ -1,4 +1,4 @@
-# Replace the '__' in the below methods to to make the specs pass!
+"# Replace the '__' in the below methods to to make the specs pass!
 # Each '__' corresponds to a single line of code you will need to write.
 # See the example below on the left and how it should look on the right.
 # def make_a_new_movie_instance    # def make_a_new_movie_instance
@@ -23,14 +23,23 @@ def can_be_created_with_a_hash_of_attributes
   movie = Movie.find_or_create_by(attributes)
 end
 
+<<<<<<< HEAD
 def can_be_created_in_a_block(title: "Home Alone", release_date: 1990)
+=======
+def can_be_created_in_a_block(title: =Home Alone, release_date: =2003)
+>>>>>>> 3d36b61f8f7d72b16bbe867f75096734c08c6c43
   # If no arguments are passed, use default values:
   # title == "Home Alone"
   # release_date == 1990
   
   Movie.create do |m|
+<<<<<<< HEAD
     m.title = title 
     m.release_date = release_date
+=======
+    m.title = "title" 
+    m.release_date = "release_date"
+>>>>>>> 3d36b61f8f7d72b16bbe867f75096734c08c6c43
   end
 end
 
@@ -47,7 +56,11 @@ def can_get_size_of_the_database
 end
 
 def can_find_the_first_item_from_the_database_using_id
+<<<<<<< HEAD
   Movie.find_by(id: 1) 
+=======
+  Movie.find(id).title.first 
+>>>>>>> 3d36b61f8f7d72b16bbe867f75096734c08c6c43
 end
 
 def can_find_by_multiple_attributes
@@ -76,7 +89,11 @@ def can_update_using_update_method
   # Update movie title to "Wat, huh?"
   Movie.create(title: "Wat?")
   movie = Movie.find_by(title: "Wat?")
+<<<<<<< HEAD
   movie.update(title: "Wat, huh?")
+=======
+  movie.update(title: "Wat,huh?")
+>>>>>>> 3d36b61f8f7d72b16bbe867f75096734c08c6c43
 end
 
 def can_update_multiple_items_at_once
